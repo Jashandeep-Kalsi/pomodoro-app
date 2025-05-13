@@ -302,6 +302,150 @@
         .drag-handle:active {
             cursor: grabbing;
         }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .content-wrapper {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .timer-display {
+                font-size: 4rem !important;
+            }
+
+            .timer-controls {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                justify-content: center;
+            }
+
+            .timer-controls button {
+                min-width: 120px;
+            }
+
+            .modern-input {
+                padding: 0.75rem !important;
+            }
+
+            .glass-card {
+                margin: 1rem 0;
+                padding: 1rem !important;
+            }
+
+            #taskInput {
+                font-size: 1rem;
+                padding: 0.75rem;
+            }
+
+            #addTaskButton {
+                padding: 0.75rem;
+            }
+
+            .quote-section {
+                margin: 1rem 0;
+            }
+
+            #quoteText {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            #quoteAuthor {
+                font-size: 0.875rem;
+            }
+
+            #quoteRefreshButton {
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+
+            /* Improve touch targets for mobile */
+            button, 
+            input[type="checkbox"],
+            .drag-handle {
+                min-height: 44px;
+                min-width: 44px;
+            }
+
+            /* Adjust task items for better mobile interaction */
+            #taskList > div {
+                padding: 0.75rem !important;
+                margin-bottom: 0.5rem;
+            }
+
+            #taskList > div .flex {
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+
+            /* Theme toggle position for mobile */
+            #themeToggle {
+                top: 1rem;
+                right: 1rem;
+                padding: 0.5rem;
+            }
+
+            /* Improve spacing for task items */
+            .task-item {
+                gap: 0.5rem;
+            }
+
+            /* Make delete buttons more visible on mobile */
+            .group button {
+                opacity: 1 !important;
+            }
+
+            /* Adjust glow effects for mobile */
+            .glow-effect {
+                opacity: 0.7;
+            }
+
+            /* Improve drag and drop on mobile */
+            .task-drag-over {
+                transform: scale(1.01);
+            }
+        }
+
+        /* Additional small screen optimizations */
+        @media (max-width: 480px) {
+            .timer-display {
+                font-size: 3rem !important;
+            }
+
+            .timer-controls button {
+                min-width: 100px;
+                font-size: 0.875rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .glass-card {
+                border-radius: 1rem !important;
+            }
+        }
+
+        /* Ensure minimum touch target sizes */
+        @media (hover: none) and (pointer: coarse) {
+            button,
+            input[type="checkbox"],
+            .drag-handle,
+            #quoteRefreshButton {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body class="main-background min-h-screen text-white">
